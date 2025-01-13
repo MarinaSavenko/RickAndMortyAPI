@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import RaMList from "../ram-list/RaMList";
+import { NavLink } from "react-router";
 
 
 
@@ -39,6 +40,7 @@ const RaMForm = () => {
     <div>
       <h1>API Рика и Морти</h1>
         <RaMList characters={list} />
+        
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { Characters } from "../ram-form/RamForm";
 import './RaMList.css'
 
@@ -12,7 +13,7 @@ const RaMList = ({ characters  }: Props) => {
       {characters.map((character) => (
         <li key={character.id}>
            <div>
-            <h3>{character.name}</h3>
+            <NavLink to={`${character.id}`}> <h3>{character.name}</h3> </NavLink>
             <p>Status: {character.status}</p>
             <p>Species: {character.species}</p>
             <p>Gender: {character.gender}</p>
