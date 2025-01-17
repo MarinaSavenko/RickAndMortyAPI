@@ -31,20 +31,48 @@ const RaMPage = () => {
             <div className="flex flex-col gap-3 items-center bg-gray-800 rounded">
                  {listid &&
                     <div >
-                        <div>
-                            <img src={listid.image} alt={listid.name} width={300} className="rounded-tr rounded-tl" /> 
-                        </div>
-                        <div className="flex flex-col p-4 ">  
-                            <h2 className="text-[20px] font-[Roboto] font-bold text-orange-500">{listid.name}</h2>  
-                            <p className="text-gray-100 font-roboto"><strong className="text-zinc-400">Status:</strong> {listid.status}</p>  
-                            <p className="text-gray-100 font-roboto"><strong className="text-zinc-400">Species:</strong> {listid.species}</p>  
-                            <p className="text-gray-100 font-roboto"><strong className="text-zinc-400">Gender:</strong> {listid.gender}</p> 
-                            <p className="text-gray-100 font-roboto"><strong className="text-zinc-400">Location:</strong> {listid.location.name}</p>  
-                            <p className="text-gray-100 font-roboto"><strong className="text-zinc-400">Origin:</strong> {listid.origin.name}</p>  
-                            {/*<p><strong>Episode:</strong> {listid.episode}</p>*/}
-                            <p className="text-gray-100 font-roboto"><strong className="text-zinc-400">Created:</strong> {listid.created}</p>
-                        </div> 
-                        
+                        <table className="m-4 ">
+                            <thead>
+                                <tr>
+                                    <th colSpan={2} className="p-4 text-center">
+                                        <img src={listid.image} alt={listid.name} width={300} className="rounded mb-4"  /> 
+                                        <h2 className="text-[20px] font-[Roboto] font-bold text-orange-500">{listid.name}</h2>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                                    <tr>  
+                                         
+                                        <td ><strong className="text-zinc-400">Status:</strong> </td>
+                                        <td className="text-gray-100 font-roboto">{listid.status}</td>                        
+                                    </tr> 
+                                    <tr>   
+                                        <td ><strong className="text-zinc-400">Species:</strong> </td>
+                                        <td className="text-gray-100 font-roboto">{listid.species}</td>
+                                    </tr>
+                                    <tr>
+                                        <td ><strong className="text-zinc-400">Gender:</strong> </td>
+                                        <td className="text-gray-100 font-roboto">{listid.gender}</td>
+                                    </tr>
+                                    <tr>
+                                        <td ><strong className="text-zinc-400">Location:</strong></td>
+                                        <td className="text-gray-100 font-roboto"> {listid.location.name}</td>
+                                    </tr>       
+                                    
+                                    <tr>
+                                        <td ><strong className="text-zinc-400">Origin:</strong> </td>
+                                        <td className="text-gray-100 font-roboto">{listid.origin.name}</td>
+                                    </tr>
+                                    <tr>
+                                        <td ><strong className="text-zinc-400">Created:</strong> </td>
+                                        <td className="text-gray-100 font-roboto">{listid.created}</td>
+                                    </tr>    
+                                             
+                                            {/*<p><strong>Episode:</strong> {listid.episode}</p>*/}
+                               
+                            </tbody>
+                        </table>
                     </div>
                  }
             </div>
