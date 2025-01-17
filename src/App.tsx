@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router";
-import "./App.css";
 import RaMContainer from "./components/ram-container/RaMContainer";
 import RaMPage from "./components/ram-container/ram-page/RaMPage";
 
@@ -8,7 +7,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<RaMContainer />} />
-        <Route path="/:id" element={<RaMPage />} />
+        <Route path="/:count" element={<RaMContainer />} />
+        <Route path="/:count/:id" element={<RaMPage />} />
       </Routes>
     </>
   );
